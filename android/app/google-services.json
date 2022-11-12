@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "523457818037",
+    "project_id": "umurimyihejuru",
+    "storage_bucket": "umurimyihejuru.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523457818037:android:11b27476e5ba5945b7fdfc",
+        "android_client_info": {
+          "package_name": "com.example.uburimyi_imbere"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "523457818037-eveam292blt7k6764m66cf44q1lqdtj8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhGEkhmhgyRq6uc2TODEaaQTYHS7oZDzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "523457818037-eveam292blt7k6764m66cf44q1lqdtj8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

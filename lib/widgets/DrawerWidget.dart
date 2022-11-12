@@ -1,5 +1,10 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../routes/RoutesHelper.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({Key? key}) : super(key: key);
@@ -8,30 +13,28 @@ class DrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        children: const [
-          DrawerHeader(
+        children: [
+          const DrawerHeader(
             padding: EdgeInsets.zero,
             child: UserAccountsDrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.red,
-              ),
+              decoration: BoxDecoration(color: Colors.blueGrey),
               accountName: Text(
-                "Programmer",
+                "Umurimyi Imbere",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-              accountEmail: Text("dearprogrammer@gmail.com",
-                  style: TextStyle(fontSize: 16)),
+              accountEmail:
+                  Text("Admin@gmail.com", style: TextStyle(fontSize: 16)),
               currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage("assets/image/avatar.jpg"),
+                backgroundImage: AssetImage("assets/image/logo.jpg"),
               ),
             ),
           ),
 
           // List Tile
-          ListTile(
+          const ListTile(
             leading: Icon(
               CupertinoIcons.home,
-              color: Colors.red,
+              color: Colors.blueGrey,
             ),
             title: Text(
               "Home",
@@ -39,58 +42,31 @@ class DrawerWidget extends StatelessWidget {
             ),
           ),
           //
-          ListTile(
+          const ListTile(
             leading: Icon(
-              CupertinoIcons.person,
-              color: Colors.red,
+              CupertinoIcons.list_bullet,
+              color: Colors.blueGrey,
             ),
             title: Text(
-              "My Account",
+              "All Products",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
+
           //
-          ListTile(
-            leading: Icon(
-              CupertinoIcons.cart_fill,
-              color: Colors.red,
-            ),
-            title: Text(
-              "My Orders",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-          ),
-          //
-          ListTile(
-            leading: Icon(
-              CupertinoIcons.heart_fill,
-              color: Colors.red,
-            ),
-            title: Text(
-              "My Wish List",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-          ),
-          //
-          ListTile(
-            leading: Icon(
-              CupertinoIcons.settings,
-              color: Colors.red,
-            ),
-            title: Text(
-              "Settings",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-          ),
-          //
-          ListTile(
-            leading: Icon(
-              Icons.exit_to_app,
-              color: Colors.red,
-            ),
-            title: Text(
-              "Log Out",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          InkWell(
+            onTap: () {
+              Get.toNamed(RoutesHelper.getLoginScreen());
+            },
+            child: const ListTile(
+              leading: Icon(
+                Icons.login,
+                color: Colors.blueGrey,
+              ),
+              title: Text(
+                "Log In",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
             ),
           ),
         ],
