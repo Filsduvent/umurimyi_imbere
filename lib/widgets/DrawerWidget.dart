@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:uburimyi_imbere/widgets/big_text.dart';
 
 import '../routes/RoutesHelper.dart';
 
@@ -31,43 +32,43 @@ class DrawerWidget extends StatelessWidget {
           ),
 
           // List Tile
-          const ListTile(
-            leading: Icon(
-              CupertinoIcons.home,
-              color: Colors.blueGrey,
-            ),
-            title: Text(
-              "Home",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          InkWell(
+            onTap: () {
+              Get.back();
+            },
+            child: ListTile(
+              leading: const Icon(
+                CupertinoIcons.home,
+                color: Colors.blueGrey,
+              ),
+              title: BigText(
+                text: "Home",
+                size: 20,
+              ),
             ),
           ),
           //
-          const ListTile(
-            leading: Icon(
-              CupertinoIcons.list_bullet,
-              color: Colors.blueGrey,
-            ),
-            title: Text(
-              "All Products",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-          ),
+          ListTile(
+              leading: const Icon(
+                CupertinoIcons.list_bullet,
+                color: Colors.blueGrey,
+              ),
+              title: BigText(
+                text: "All Products",
+                size: 20,
+              )),
 
           //
           InkWell(
             onTap: () {
               Get.toNamed(RoutesHelper.getLoginScreen());
             },
-            child: const ListTile(
-              leading: Icon(
-                Icons.login,
-                color: Colors.blueGrey,
-              ),
-              title: Text(
-                "Log In",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-            ),
+            child: ListTile(
+                leading: const Icon(
+                  Icons.login,
+                  color: Colors.blueGrey,
+                ),
+                title: BigText(text: "Login")),
           ),
         ],
       ),
